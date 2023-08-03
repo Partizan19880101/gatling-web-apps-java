@@ -1,3 +1,10 @@
-/target
+# Intellij
+.idea/
+*.iml
 /.mvn/wrapper/*.jar
-/.idea
+
+# Maven
+logs/
+target/
+test-output/
+
