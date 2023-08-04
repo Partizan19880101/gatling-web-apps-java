@@ -1,7 +1,6 @@
 package acetoys;
 
 import acetoys.simulation.TestPopulation;
-import acetoys.simulation.TestScenario;
 import io.gatling.javaapi.core.*;
 import io.gatling.javaapi.http.*;
 
