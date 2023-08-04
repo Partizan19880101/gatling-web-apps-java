@@ -32,14 +32,6 @@ public class AceToysSimulation extends Simulation {
 //              .protocols(httpProtocol);
 
         switch (TEST_TYPE) {
-            case "INSTANT_USERS":
-                setUp(TestPopulation.instantUsers).protocols(httpProtocol)
-                        .assertions(
-                                global().responseTime().mean().lt(5),
-                                global().successfulRequests().percent().gt(99.0),
-                                forAll().responseTime().max().lt(10)
-                        );
-                break;
             case "RAMP_USERS":
                 setUp(TestPopulation.rampUsers).protocols(httpProtocol);
                 break;
@@ -49,6 +41,7 @@ public class AceToysSimulation extends Simulation {
             case "CLOSED_MODEL":
                 setUp(TestPopulation.closeModel).protocols(httpProtocol);
                 break;
+            case "INSTANT_USERS":
             default:
                 setUp(TestPopulation.instantUsers).protocols(httpProtocol);
                 break;
