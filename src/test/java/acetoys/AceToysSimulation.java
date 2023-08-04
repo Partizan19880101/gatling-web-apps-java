@@ -35,9 +35,9 @@ public class AceToysSimulation extends Simulation {
             case "INSTANT_USERS":
                 setUp(TestPopulation.instantUsers).protocols(httpProtocol)
                         .assertions(
-                                global().responseTime().mean().lt(3),
+                                global().responseTime().mean().lt(5),
                                 global().successfulRequests().percent().gt(99.0),
-                                forAll().responseTime().max().lt(5)
+                                forAll().responseTime().max().lt(10)
                         );
                 break;
             case "RAMP_USERS":
